@@ -1,0 +1,35 @@
+**/.venv
+
+# CDK
+**/dist/
+**/cdk.out/
+**/node_modules/
+
+!**/eslintrc.js
+!**/jest.config.js
+
+# TypeScript
+*.d.ts
+*.js
+*.js.map
+
+# Environment
+**/.env
+**/.env.*
+!**/.env.example
+
+!.eslintrc.js
+!jest.config.js
+!lambda/esbuild.config.js
+
+.DS_Store
+
+**/.zip
+
+**/__pycache__
+**/*.pyc
+**/*.pyo
+**/*.pyd
+**/.mypy_cache
+**/.pytest_cache
+**/.coverage

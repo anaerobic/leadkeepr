@@ -1,0 +1,6 @@
+# Run lint-staged for staged files
+npx lint-staged
+
+# Check if build passes for all projects
+echo "Running build check..."
+npm run build:all

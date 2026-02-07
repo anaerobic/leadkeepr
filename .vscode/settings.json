@@ -1,0 +1,10 @@
+{
+  "files.exclude": {
+    "**/.cache": true,
+    "**/.git": true,
+    "**/build": true,
+    "**/cdk.out": true,
+    "**/node_modules": true
+  },
+  "explorer.excludeGitIgnore": false
+}

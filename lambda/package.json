@@ -1,0 +1,40 @@
+{
+  "name": "lambda",
+  "version": "1.0.0",
+  "description": "Lambda functions",
+  "main": "dist/index.js",
+  "scripts": {
+    "prebuild": "npm run clean",
+    "build": "npm run typecheck && node esbuild.config.js",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist",
+    "test": "cd .. && NODE_OPTIONS=--experimental-vm-modules npx jest --selectProjects=lambda",
+    "test:file": "cd .. && NODE_OPTIONS=--experimental-vm-modules npx jest --selectProjects=lambda --testPathPattern",
+    "lint": "cd .. && npx eslint lambda/src/**/*.ts",
+    "lint:fix": "cd .. && npx eslint lambda/src/**/*.ts --fix"
+  },
+  "dependencies": {
+    "@aws-lambda-powertools/batch": "^2.7.0",
+    "@aws-lambda-powertools/logger": "^2.7.0",
+    "@aws-lambda-powertools/metrics": "^2.7.0",
+    "@aws-lambda-powertools/tracer": "^2.7.0",
+    "@aws-sdk/client-bedrock-agent-runtime": "^3.873.0",
+    "@aws-sdk/client-bedrock-runtime": "^3.888.0",
+    "@aws-sdk/client-dynamodb": "^3.873.0",
+    "@aws-sdk/client-s3": "^3.873.0",
+    "@aws-sdk/client-scheduler": "^3.873.0",
+    "@aws-sdk/client-ses": "^3.873.0",
+    "@aws-sdk/client-textract": "^3.873.0",
+    "@aws-sdk/lib-dynamodb": "^3.873.0",
+    "@date-fns/tz": "^1.4.1",
+    "@middy/core": "^5.4.1",
+    "date-fns": "^4.1.0",
+    "ical-generator": "^9.0.0",
+    "ical.js": "^2.2.1",
+    "mailparser": "^3.6.9",
+    "openai": "^4.67.3",
+    "pdf-parse-debugging-disabled": "^1.1.1",
+    "uuid": "^10.0.0"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,25 @@
+{
+  "name": "cdk",
+  "version": "1.0.0",
+  "description": "CDK stack",
+  "main": "dist/app.js",
+  "scripts": {
+    "prebuild": "npm run clean",
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "watch": "tsc -w",
+    "test": "cd .. && npx jest --selectProjects=cdk --passWithNoTests",
+    "lint": "cd .. && npx eslint cdk/lib/**/*.ts",
+    "lint:fix": "cd .. && npx eslint cdk/lib/**/*.ts --fix",
+    "cdk": "cdk",
+    "deploy": "cdk deploy MainStack",
+    "destroy": "cdk destroy",  
+    "diff": "cdk diff",
+    "synth": "cdk synth"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "^2.100.0",
+    "constructs": "^10.3.0",
+    "dotenv": "^17.2.1"
+  }
+}
